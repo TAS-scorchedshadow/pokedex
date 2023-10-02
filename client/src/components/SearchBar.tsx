@@ -14,7 +14,7 @@ const SearchBar = ({setName}: props) => {
 
   return (
     <div className="searchContainer">
-      <TextField id="pokemon" size="small" placeholder='Enter pokemon' onChange={(e) => setInput(e.target.value)}></TextField>
+      <TextField id="pokemon" size="small" placeholder='Enter pokemon' onChange={(e) => setName(e.target.value)}></TextField>
       <a onClick={() => setName(input)}>
         <FontAwesomeIcon className="searchIcon" icon={faMagnifyingGlass} style={{color: "#00ffff",}} />
       </a>

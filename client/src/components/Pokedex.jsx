@@ -7,9 +7,10 @@ import SearchBar from './SearchBar.jsx'
 
 
 const Pokedex = () => {
-  const [pokeName, setPokeName] = useState<String>('piplup');
-  const [pokeImage, setPokeImage] = useState<string>('');
+  const [pokeName, setPokeName] = useState('piplup');
+  const [pokeImage, setPokeImage] = useState('');
   const [isLoading, setIsLoading] = useState(false)
+
 
   const updatePokeName = (name) => {
     setPokeName(name);

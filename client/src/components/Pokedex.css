@@ -23,6 +23,8 @@
   transform: translateX(-50%);
 }
 
-.pokeName {
+.text-container {
   margin-top: 10vh;
+  display: flex;
+  align-items: center;
 }

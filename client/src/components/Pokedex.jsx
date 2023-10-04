@@ -3,12 +3,15 @@ import './Pokedex.css'
 import { useEffect, useState } from 'react'
 import { CircularProgress } from '@mui/material'
 import SearchBar from './SearchBar.jsx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRotate } from '@fortawesome/free-solid-svg-icons'
 
 
 
 const Pokedex = () => {
   const [pokeName, setPokeName] = useState('piplup');
-  const [pokeImage, setPokeImage] = useState('');
+  const [pokeImage, setPokeImage] = useState(["", ""]);
+  const [showFront, setShowFront] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
 
 
@@ -25,8 +28,10 @@ const Pokedex = () => {
       fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
       .then(resp => resp.json())
       .then(data => {
-        const frontSprite = data.sprites.front_default
-        setPokeImage(frontSprite)
+        const sprites = data.sprites
+        const frontSprite = sprites.front_default
+        const backSprite = sprites.back_default
+        setPokeImage([frontSprite, backSprite])
         setIsLoading(false)
       }).catch(error => {
         console.log(error)
@@ -41,8 +46,13 @@ const Pokedex = () => {
       </div>
       <SearchBar setName={updatePokeName}/>
       <div className="pokeImg-container">
-        {isLoading ? <CircularProgress /> : <img className="pokeImg" src={pokeImage}></img>}
-        <h4 className="pokeName">{pokeName}</h4>
+        {isLoading ? <CircularProgress /> : <img className="pokeImg" src={showFront ? pokeImage[0] : pokeImage[1]}></img>}
+        <div className='text-container'>
+          <h4>{pokeName}</h4>
+          <a onClick={() => setShowFront((e) => !e)}>
+            <FontAwesomeIcon className="searchIcon" icon={faRotate}/>
+          </a>
+        </div>
       </div>
     </div>
   )

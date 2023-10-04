@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import Pokedex from './components/Pokedex';
+import Pokedex from './components/Pokedex.jsx';
 
 function App() {
   return (
@@ -10,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

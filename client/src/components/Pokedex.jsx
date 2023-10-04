@@ -1,8 +1,8 @@
 import React from 'react'
 import './Pokedex.css'
 import { useEffect, useState } from 'react'
-import SearchBar from './SearchBar'
 import { CircularProgress } from '@mui/material'
+import SearchBar from './SearchBar.jsx'
 
 
 
@@ -11,7 +11,7 @@ const Pokedex = () => {
   const [pokeImage, setPokeImage] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false)
 
-  const updatePokeName = (name: String) => {
+  const updatePokeName = (name) => {
     setPokeName(name);
     return;
   }

@@ -5,11 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import './SearchBar.css'
 
-type props = {
-  setName: any;
-}
-
-const SearchBar = ({setName}: props) => {
+const SearchBar = ({setName}) => {
   const [input, setInput] = useState('');
 
   return (

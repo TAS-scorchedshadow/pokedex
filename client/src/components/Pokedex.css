@@ -17,7 +17,7 @@
 }
 
 .pokeImg-container {
-  position: absolute;
+  position: fixed;
   left: 51%;
   top: 46%;
   transform: translateX(-50%);

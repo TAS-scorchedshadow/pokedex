@@ -1,34 +1,8 @@
-# Pokemon Fetch Exercise
+# React + Vite
 
-### Getting Started
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-To run the project, you must first install all the packages using
+Currently, two official plugins are available:
 
-`npm i`
-
-### Launching your app
-
-To launch your project you can use the following script
-
-`npm start`
-
-### Task
-
-Edit the src/components/Pokedex file to add a fetch request which lets you display the sprite of the given pokemon on the pokedex.
-
-Checkout the documentation of the api here:
-https://pokeapi.co/docs/v2
-
-HINT
-
-Checkout the /pokemon section
-
-### Bonus Task
-
-Try and fetch more information from pokeapi to spice up your pokedex!
-
-Here are some suggestsion:
-
-- Show the pokemon type
-- Show the pokemon description (flavour text)
-- Show what abilities the pokemon can learn
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

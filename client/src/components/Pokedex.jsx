@@ -18,7 +18,7 @@ const Pokedex = () => {
     // Write your fetch statement here!
     // It should fetch the link of the sprite for the given pokemon and store it inside the pokeImage state
     //
-  }, [pokeName, pokeImage])
+  }, [pokeName])
   return (
     <div>
       <div className="container">
